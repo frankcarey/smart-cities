@@ -1,3 +1,6 @@
 [submodule "data"]
 	path = data
 	url = https://github.com/WiMLDS/smart_cities
+[submodule "scripts/choroplethNYC"]
+	path = scripts/choroplethNYC
+	url = https://github.com/fedhere/choroplethNYC
