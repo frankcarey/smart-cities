@@ -1,0 +1,6 @@
+pandas
+ipython
+geopandas
+fiona
+shapely
+
