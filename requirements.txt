@@ -1,6 +1,7 @@
 pandas
 ipython
+jupyter
 geopandas
 fiona
 shapely
-
+google-api-python-client
