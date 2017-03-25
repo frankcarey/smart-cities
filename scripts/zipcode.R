@@ -145,13 +145,8 @@ boxplot(map_df$typecatego, as.numeric(map_df$acres))
 
 plot(map_df$typecatego,as.numeric(map_df$acres), xlab = "type", ylab = "acres", pch = 19, col = rgb(0, 0, 0, 0.1))
 
-q <- qqplot(map_df$typecatego,as.numeric(map_df$acres)) + theme(axis.text.x = element_text(angle=90, hjust=1))
-q + theme(axis.text.x = element_text(angle=90, hjust=1))
-
-ggplot(map_df, aes(x=reorder(name, avg), y=avg)) +
-  geom_point(size=3) + # Use a larger dot
-  theme_bw() +
-  theme(axis.text.x = element_text(angle=60, hjust=1),
-        panel.grid.major.y = element_blank(),
-        panel.grid.minor.y = element_blank(),
-        panel.grid.major.x = element_line(colour="grey60", linetype="dashed"))
+# boxplots of acerage by park type
+ggplot(map_df, aes(x=typecatego, y=as.numeric(acres))) +
+  geom_boxplot() + theme(axis.text.x=element_text(hjust=0, angle=90)) + 
+  xlab("Park Type") + ylab("Area (acres)") + labs(title="Park area by type") +
+  theme(plot.title = element_text(hjust = 0.5))
